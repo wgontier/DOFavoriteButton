@@ -90,7 +90,7 @@ open class DOFavoriteButton: UIButton {
         self.init(frame: frame, image: UIImage())
     }
 
-    public init(frame: CGRect, image: UIImage!) {
+    @objc public init(frame: CGRect, image: UIImage!) {
         super.init(frame: frame)
         self.image = image
         createLayers(image: image)
@@ -361,7 +361,7 @@ open class DOFavoriteButton: UIButton {
         self.layer.opacity = 1.0
     }
 
-    open func select() {
+    @objc open func select() {
         isSelected = true
         imageShape.fillColor = imageColorOn.cgColor
 
@@ -380,7 +380,7 @@ open class DOFavoriteButton: UIButton {
         CATransaction.commit()
     }
 
-    open func deselect() {
+    @objc open func deselect() {
         isSelected = false
         imageShape.fillColor = imageColorOff.cgColor
 
